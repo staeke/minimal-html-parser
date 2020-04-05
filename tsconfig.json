@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "noImplicitAny": true,
+    "target": "esnext",
+    "lib": [
+      "es2020"
+    ]
+  },
+  "files": [
+    "parser.ts"
+  ]
+}

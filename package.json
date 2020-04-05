@@ -1,0 +1,38 @@
+{
+  "name": "minimal-html-parser",
+  "version": "1.0.0",
+  "description": "A minimalistic HTML parser",
+  "main": "dist/parser.js",
+  "repository": "https://github.com/staeke/minimal-html-parser",
+  "types": "dist/parser.d.ts",
+  "scripts": {
+    "build": "tsc -d --outDir dist",
+    "lint": "eslint *.ts",
+    "minify": "google-closure-compiler --language_out=ECMASCRIPT_2019 --js=dist/parser.js  --js_output_file=dist/parser.min.js  --assume_function_wrapper --env CUSTOM",
+    "start": "node -r ts-node/register/transpile-only --harmony main.ts",
+    "test": "jest"
+  },
+  "engines": {
+    "node": ">=13.7"
+  },
+  "author": "Staffan Eketorp",
+  "license": "ISC",
+  "dependencies": {
+    "he": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/he": "^1.1.1",
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.9.2",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "google-closure-compiler": "^20200315.0.0",
+    "jest": "^25.2.7",
+    "mocha": "^7.1.1",
+    "ts-jest": "^25.3.1",
+    "ts-node": "^8.8.1",
+    "typescript": "^3.8.3"
+  }
+}
