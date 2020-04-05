@@ -4,7 +4,7 @@ Includes TypeScript typings. 1.3Kb minified/mangled/gzipped without dependencies
    
 ### Usage
 
-```
+```ts
 import {parseHtml} from 'minimal-html-parser'
 
 const dom = parseHtml('<strong>&quot;Hello\n\nthere&quot;</strong>')
