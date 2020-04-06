@@ -15,11 +15,7 @@ const dom = parseHtml('<strong>&quot;Hello\n\nthere&quot;</strong>')
 
 // Prints: strong "Hello there"
 console.log(dom[0].tagName, dom[0].innerText)
-```
-
-### Dependencies
-   
-   - **`he`** https://www.npmjs.com/package/he - Well known author, very popular
+```     
    
 ### API
 Just supports a limited version of the DOM
