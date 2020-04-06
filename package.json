@@ -1,6 +1,6 @@
 {
   "name": "minimal-html-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A minimalistic HTML parser",
   "main": "dist/parser.js",
   "repository": "https://github.com/staeke/minimal-html-parser",
