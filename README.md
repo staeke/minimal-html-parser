@@ -1,6 +1,10 @@
-A minimalistic html parser supporting a subset of standard DOM APIs , just because...
+A minimalistic html parser supporting a subset of standard DOM APIs, just for the fun of it.
 
-Includes TypeScript typings. 1.3Kb minified/mangled/gzipped without dependencies. (`he` is 30Kb though)
+Features:
+
+- Includes TypeScript typings. 
+- 2.7Kb minified/mangled/gzipped
+- No dependencies
    
 ### Usage
 

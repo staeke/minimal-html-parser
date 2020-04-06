@@ -1,4 +1,4 @@
-const he = require('he');
+import {htmlDecode} from './he';
 
 const RE_END_TAG_OR_SPACE = /[\s>/]/;
 const SELF_CLOSING_TAGS = [
@@ -94,7 +94,7 @@ function parseInnerHtml(str: string, i: number): [number, Node[]] {
   while (i < str.length) {
     if (str[i] === '<') {
       if (textStart < i) {
-        nodes.push(new Text(he.decode(str.substr(textStart, i - textStart))));
+        nodes.push(new Text(htmlDecode(str.substr(textStart, i - textStart))));
       }
       let child;
       [i, child] = parseElLike(str, i);
@@ -109,7 +109,7 @@ function parseInnerHtml(str: string, i: number): [number, Node[]] {
     }
   }
   if (textStart < i) {
-    nodes.push(new Text(he.decode(str.substr(textStart, i - textStart))));
+    nodes.push(new Text(htmlDecode(str.substr(textStart, i - textStart))));
   }
   return [i, nodes];
 }
@@ -183,7 +183,7 @@ function parseAttr(str: string, i: number): [number, string, string] {
   [i, attrName] = parseToken(str, i, '=', 'attribute name');
   parseAssert(str[i + 1] === '"', 'Expected " at ', str, i);
   [i, attrValue] = parseToken(str, i + 2, '"', 'attribute name');
-  return [i + 1, attrName, he.decode(attrValue, {isAttributeValue: true})];
+  return [i + 1, attrName, htmlDecode(attrValue)];
 }
 
 function parseToken(str: string, i: number, delimiter: RegExp|string, typeName: string): [number, string] {
